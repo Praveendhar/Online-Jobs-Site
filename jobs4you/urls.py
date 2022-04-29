@@ -20,9 +20,14 @@ from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^$',views.login,name='login'),
-    re_path(r'^register/$',views.register,name='register'),
+    re_path(r'^login/$',views.login,name='login'),
+    re_path(r'^user_register/$',views.user_register,name='user_register'),
+    re_path(r'^company_register/$',views.company_register,name='company_register'),
     re_path(r'^user_index/$',views.user_index,name='user_index'),
     re_path(r'^user_dash/$',views.user_dash,name='user_dash'),
     re_path(r'^user_view_companies/$',views.user_view_companies,name='user_view_companies'),
+    re_path(r'^user_view_company/$',views.user_view_company,name='user_view_company'),
+    re_path(r'^company_dash/$',views.company_dash,name='company_dash'),
+    re_path(r'^company_index/$',views.company_index,name='company_index'),
     re_path(r'^company_dash/$',views.company_dash,name='company_dash'),
 ]
